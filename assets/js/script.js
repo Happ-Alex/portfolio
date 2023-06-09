@@ -48,11 +48,7 @@ let touchstartX = 0;
 let touchendX = 0;
 
 sliderLine.addEventListener('touchstart', function (event) {
-  touchstartX = event.touches[0].clientX;
-});
-
-sliderLine.addEventListener('touchmove', function (event) {
-  event.preventDefault();
+  touchstartX = event.changedTouches[0].clientX;
 });
 
 sliderLine.addEventListener('touchend', function (event) {
@@ -61,7 +57,7 @@ sliderLine.addEventListener('touchend', function (event) {
 });
 
 function handleSwipe() {
-  const minSwipeDistance = 50;
+  const minSwipeDistance = 50; 
   const swipeDistance = touchstartX - touchendX;
 
   if (swipeDistance > minSwipeDistance) {
@@ -82,6 +78,6 @@ function handleSwipe() {
 function rollSlider() {
   if (window.innerWidth <= 950) {
     width = document.querySelector('.slider').offsetWidth;
-    sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+    sliderLine.style.transform = 'translateX(-' + count * width + 'px)';
   }
 }
