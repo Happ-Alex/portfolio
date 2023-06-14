@@ -1,3 +1,4 @@
+// Sidebar navigation panel 
 let sidebarButton = document.querySelector('.sidebar-button');
 let sidebar = document.querySelector('.sidebar');
 let mainBody = document.querySelector('.main');
@@ -28,8 +29,45 @@ navigationLink.forEach((link,index) => {
   });
 })
 
+// toggles
 
+let settingBlock = document.querySelector(".gear-block")
+let settingButton = document.querySelector('.gear-button')
+let settingPannel = document.querySelector('.gear')
 
+settingButton.addEventListener('click', () => {
+  settingPannel.classList.toggle('active');
+  settingBlock.classList.toggle('active');
+})
+
+// day switcher
+let toggleDay = document.querySelector('.ball');
+let changeBody = document.querySelector('.body');
+
+toggleDay.addEventListener("click", () => {
+  toggleDay.classList.toggle('day');
+  if (!toggleDay.classList.contains('day')) {
+    changeBody.classList.add("dark")
+  } else {
+    changeBody.classList.remove("dark")
+  }
+});
+
+// theme color
+
+const colorChange = document.querySelectorAll('.alternate-style');
+
+function setActiveStyle(color) {
+  colorChange.forEach((style) => {
+    if (color === style.getAttribute('title')) {
+      style.removeAttribute("disabled");
+    } else {
+      style.setAttribute("disabled", "true")
+    }
+  });
+};
+
+// Swiper
 let count = 0;
 let width;
 
@@ -48,7 +86,11 @@ let touchstartX = 0;
 let touchendX = 0;
 
 sliderLine.addEventListener('touchstart', function (event) {
-  touchstartX = event.changedTouches[0].clientX;
+  touchstartX = event.touches[0].clientX;
+});
+
+sliderLine.addEventListener('touchmove', function (event) {
+  event.preventDefault();
 });
 
 sliderLine.addEventListener('touchend', function (event) {
