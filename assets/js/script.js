@@ -28,6 +28,27 @@ navigationLink.forEach((link,index) => {
     screenHide.classList.remove('active');
   });
 })
+// portfolio accordion
+
+const portfolioCollection = document.querySelectorAll(".portfolio-collection");
+const portfolioLink = document.querySelectorAll('.portfolio-link');
+
+portfolioLink.forEach((portEl, portIndex) => {
+  portEl.addEventListener('click', () => {
+    const currentCollection = portfolioCollection[portIndex];
+
+    if (currentCollection.style.display) {
+      currentCollection.style.display = null;
+    } else {
+      portfolioCollection.forEach((el) => el.style.display = null);
+      currentCollection.style.display = "flex";
+
+    }
+  });
+});
+
+
+
 
 // toggles
 
@@ -68,58 +89,29 @@ function setActiveStyle(color) {
 };
 
 // Swiper
-let count = 0;
-let width;
 
-const sliderLine = document.querySelector('.portfolio-slider');
-const slides = document.querySelectorAll('.portfolio-box');
-
-function init() {
-  width = document.querySelector('.slider').offsetWidth;
-  rollSlider();
-}
-
-init();
-window.addEventListener('resize', init);
-
-let touchstartX = 0;
-let touchendX = 0;
-
-sliderLine.addEventListener('touchstart', function (event) {
-  touchstartX = event.touches[0].clientX;
-});
-
-sliderLine.addEventListener('touchmove', function (event) {
-  event.preventDefault();
-});
-
-sliderLine.addEventListener('touchend', function (event) {
-  touchendX = event.changedTouches[0].clientX;
-  handleSwipe();
-});
-
-function handleSwipe() {
-  const minSwipeDistance = 50; 
-  const swipeDistance = touchstartX - touchendX;
-
-  if (swipeDistance > minSwipeDistance) {
-    count++;
-    if (count >= slides.length) {
-      count = 0;
-    }
-  } else if (swipeDistance < -minSwipeDistance) {
-    count--;
-    if (count < 0) {
-      count = slides.length - 1;
+const swiper = new Swiper('.swiper', {
+    breakpoints: {
+      1000: {
+        slidesPerView: 'auto',
+      },
+    740: {
+      slidesPerView: 2,
+    },
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
     }
   }
+});
 
-  rollSlider();
-}
+// 3D
 
-function rollSlider() {
-  if (window.innerWidth <= 950) {
-    width = document.querySelector('.slider').offsetWidth;
-    sliderLine.style.transform = 'translateX(-' + count * width + 'px)';
-  }
-}
+document.addEventListener('mousemove', e => {
+	Object.assign(document.documentElement, {
+		style: `
+		--move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
+		--move-y: ${(e.clientY - window.innerHeight / 2) * .01}deg;
+		`
+	})
+})
