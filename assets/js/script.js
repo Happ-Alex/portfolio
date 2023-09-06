@@ -115,3 +115,6 @@ document.addEventListener('mousemove', e => {
 		`
 	})
 })
+
+// 
+alert("This site hasn`t been done properly yet (Цей сайт ще не завершено повністю)")
