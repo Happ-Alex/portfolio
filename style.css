@@ -158,9 +158,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .btn:hover {
   box-shadow: 10px 5px 5px var(--skin-color);
-  background-color: rgb(238, 233, 233);
+  background-color: #f2f2fc;
   color: #302e4d;
   border: 1px solid var(--skin-color);
+}
+.btn:hover a {
+  color: #504e70;
+}
+.btn a {
+  color: #f2f2fc;
 }
 
 .img-fluid {
