@@ -31,16 +31,16 @@
 
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#main" class="sidebar-nav__item active"><i class="fa fa-home"></i>Головна сторінка</a>
+                    <a href="#main" class="sidebar-nav__item active main-link"><i class="fa fa-home"></i>Головна сторінка</a>
                 </li>
                 <li>
-                    <a href="#about" class="sidebar-nav__item"><i class="fa fa-user"></i>Про мене</a>
+                    <a href="#about" class="sidebar-nav__item about-link"><i class="fa fa-user"></i>Про мене</a>
                 </li>
                 <li>
                     <a href="#services" class="sidebar-nav__item"><i class="fa fa-laptop"></i>Навички</a>
                 </li>
                 <li>
-                    <a href="#portfolio" class="sidebar-nav__item"><i class="fa fa-briefcase"></i>Портфоліо</a>
+                    <a href="#portfolio" class="sidebar-nav__item disabled"><i class="fa fa-briefcase"></i>Портфоліо</a>
                 </li>
                 <li>
                     <a href="#contact" class="sidebar-nav__item"><i class="fa fa-comments"></i>Контакти</a>
@@ -90,14 +90,14 @@
 
     <div class="screen-hider"></div>
     <main class="wrapper home">
-        <section class="section main" id="main">
+        <section class="section main main-bar" id="main">
             <div class="container">
                 <div class="row">
                     <div class="main-info">
                         <h3 class="main-info__title">Вітання, моє ім'я <span class="name">Олександр Нещасний</span></h3>
-                        <h3 class="main-info__intro">Я шукаю можливість працювати як <span class="type-animation">асистент аналітика/менеджера</span></h3>
+                        <h3 class="main-info__intro">Я шукаю можливість працювати як <span class="type-animation">data scientist/ data analytic</span></h3>
                         <p class="main-info__text">Адаптивність, допитливість та самомотивація— мої сильні сторони, Я завжди готовий до нових випробувань та розвиватись у динамічному колективі. Мій основний принцип— завжди робити все можливе для досягнення оптимальних результатів.</p>
-                        <a href="#contact" class="btn info">Більше про мене</a>
+                        <a href="#contact" class="btn info" id= "about">Більше про мене</a>
                     </div>
                     <div class="main-img">
                         <img src="assets/img/person.jpg" alt="avatar" class="img-fluid">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </section>
-        <section class="section about hidden" id="about">
+        <section class="section about hidden" id="about-bar">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -115,7 +115,7 @@
                 <p class="about-text">Моє основне хобі— front-end developing. Відносно недавно я відкрив для себе це і тепер завжди намагаюсь витрачати декілька годин для покращення вмінь у
                     web-programming. Варто згадати, що мій університет надає чудові тренінги мов програмування для Data Science як SQL, R, Python і
                     в майбутньому планую поглиблено вивчати їх. На додачу, я продвинутий користувач програм пакету Microsoft Office.
-                    Хоча, я і проживаю у місті Васильків, Київська область, проте доїхати до центру Києва мені не стане великою проблемою </p>
+                    </p>
                 <div class="row">
                     <div class="about-info">
                         <h3 class="about-info__title"><span>ПІБ:</span>Нещасний Олександр Андрійович</h3>
@@ -172,46 +172,6 @@
                     <div class="grid">
                         <div class="services-box">
                             <div class="services-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM11 12C10.4477 12 10 12.4477 10 13V17V21C10 21.5523 10.4477 22 11 22H15H21C21.5523 22 22 21.5523 22 21V17V13C22 12.4477 21.5523 12 21 12H15H11ZM12 16V14H14V16H12ZM16 16V14H20V16H16ZM16 20V18H20V20H16ZM14 18V20H12V18H14Z"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h4 class="services-title">Excel таблиці</h4>
-                            <p class="services-info">Управління та аналіз групи пов’язаних даних</p>
-                        </div>
-                        <div class="services-box">
-                            <div class="services-icon">
-                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <title>image</title>
-                                        <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-2.496-1.76-4.256t-4.224-1.76h-20q-2.496 0-4.256 1.76t-1.76 4.256v20zM4 26.016v-20q0-0.832 0.576-1.408t1.44-0.608h20q0.8 0 1.408 0.608t0.576 1.408v20q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 24q0 0.832 0.576 1.44t1.408 0.576h16q0.832 0 1.408-0.576t0.608-1.44v-0.928q-0.224-0.448-1.12-2.688t-1.6-3.584-1.28-2.112q-0.544-0.576-1.12-0.608t-1.152 0.384-1.152 1.12-1.184 1.568-1.152 1.696-1.152 1.6-1.088 1.184-1.088 0.448q-0.576 0-1.664-1.44-0.16-0.192-0.48-0.608-1.12-1.504-1.6-1.824-0.768-0.512-1.184 0.352-0.224 0.512-0.928 2.24t-1.056 2.56v0.64zM6.016 9.024q0 1.248 0.864 2.112t2.112 0.864 2.144-0.864 0.864-2.112-0.864-2.144-2.144-0.864-2.112 0.864-0.864 2.144z"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h4 class="services-title">Презентація</h4>
-                            <p class="services-info">Створення цікавих та анімованих презентацій</p>
-                        </div>
-                        <div class="services-box">
-                            <div class="services-icon">
-                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="var(--skin-color)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path fill="var(--skin-color)" fill-rule="evenodd" d="M4 1a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7.414A2 2 0 0017.414 6L13 1.586A2 2 0 0011.586 1H4zm0 2h7.586L16 7.414V17H4V3zm2 2a1 1 0 000 2h5a1 1 0 100-2H6zm-1 5a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h8a1 1 0 100-2H6z fill: var(--skin-color)"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h4 class="services-title">Ведення документація</h4>
-                            <p class="services-info">Зберігання, ведення та впорядкування електронних документів</p>
-                        </div>
-                        <div class="services-box">
-                            <div class="services-icon">
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502.707 502.707" xml:space="preserve">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -259,7 +219,7 @@
                                 </svg>
                             </div>
                             <h4 class="services-title">Створення баз даних</h4>
-                            <p class="services-info">Створення бази даних. Використання DQL, DDL, DML запитів</p>
+                            <p class="services-info">Створення бази даних. Використання DQL, DDL, DML запитів та тригерів</p>
                         </div>
                         <div class="services-box">
                             <div class="services-icon">
@@ -273,8 +233,50 @@
                                 </svg>
                             </div>
                             <h4 class="services-title">Обробка даних</h4>
-                            <p class="services-info">Аналіз наборів даних і створення моделей прогнозування. Візуалізація статистичних даних</p>
+                            <p class="services-info">Обробка даних, аналіз датасетів та візуалізація статистичних даних за допомогою Python та R</p>
                         </div>
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>image</title>
+                                        <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-2.496-1.76-4.256t-4.224-1.76h-20q-2.496 0-4.256 1.76t-1.76 4.256v20zM4 26.016v-20q0-0.832 0.576-1.408t1.44-0.608h20q0.8 0 1.408 0.608t0.576 1.408v20q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 24q0 0.832 0.576 1.44t1.408 0.576h16q0.832 0 1.408-0.576t0.608-1.44v-0.928q-0.224-0.448-1.12-2.688t-1.6-3.584-1.28-2.112q-0.544-0.576-1.12-0.608t-1.152 0.384-1.152 1.12-1.184 1.568-1.152 1.696-1.152 1.6-1.088 1.184-1.088 0.448q-0.576 0-1.664-1.44-0.16-0.192-0.48-0.608-1.12-1.504-1.6-1.824-0.768-0.512-1.184 0.352-0.224 0.512-0.928 2.24t-1.056 2.56v0.64zM6.016 9.024q0 1.248 0.864 2.112t2.112 0.864 2.144-0.864 0.864-2.112-0.864-2.144-2.144-0.864-2.112 0.864-0.864 2.144z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="services-title">Презентація</h4>
+                            <p class="services-info">Створення цікавих та анімованих презентацій за допомогою Canva та Figma</p>
+                        </div>
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="var(--skin-color)">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill="var(--skin-color)" fill-rule="evenodd" d="M4 1a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7.414A2 2 0 0017.414 6L13 1.586A2 2 0 0011.586 1H4zm0 2h7.586L16 7.414V17H4V3zm2 2a1 1 0 000 2h5a1 1 0 100-2H6zm-1 5a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h8a1 1 0 100-2H6z fill: var(--skin-color)"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="services-title">Ведення документація</h4>
+                            <p class="services-info">Просунуте використання офісних програм з пакету Microsoft</p>
+                        </div>
+                        
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM11 12C10.4477 12 10 12.4477 10 13V17V21C10 21.5523 10.4477 22 11 22H15H21C21.5523 22 22 21.5523 22 21V17V13C22 12.4477 21.5523 12 21 12H15H11ZM12 16V14H14V16H12ZM16 16V14H20V16H16ZM16 20V18H20V20H16ZM14 18V20H12V18H14Z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="services-title">Вивчення С#</h4>
+                            <p class="services-info">Базові знання ООП мови програмування</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

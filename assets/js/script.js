@@ -88,6 +88,21 @@ function setActiveStyle(color) {
   });
 };
 
+const aboutButton = document.querySelector('#about')
+const aboutBar = document.querySelector('#about-bar')
+const mainBar = document.querySelector('.main-bar')
+const aboutLink = document.querySelector('.about-link')
+const mainLink = document.querySelector('.main-link')
+aboutButton.addEventListener('click', () => {
+  aboutBar.classList.remove('hidden')
+  mainBar.classList.add('hidden')
+  aboutLink.classList.add('active')
+  mainLink.classList.remove('active')
+  
+
+
+})
+
 // Swiper
 
 const swiper = new Swiper('.swiper', {

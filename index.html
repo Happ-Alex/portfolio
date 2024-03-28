@@ -31,16 +31,16 @@
 
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#main" class="sidebar-nav__item active"><i class="fa fa-home"></i>Homepage</a>
+                    <a href="#main" class="sidebar-nav__item active main-link" ><i class="fa fa-home"></i>Homepage</a>
                 </li>
                 <li>
-                    <a href="#about" class="sidebar-nav__item"><i class="fa fa-user"></i>About</a>
+                    <a href="#about" class="sidebar-nav__item about-link"><i class="fa fa-user"></i>About</a>
                 </li>
                 <li>
                     <a href="#services" class="sidebar-nav__item"><i class="fa fa-laptop"></i>Skills</a>
                 </li>
                 <li>
-                    <a href="#portfolio" class="sidebar-nav__item"><i class="fa fa-briefcase"></i>Portfolio</a>
+                    <a href="#portfolio" class="sidebar-nav__item disabled"><i class="fa fa-briefcase"></i>Portfolio</a>
                 </li>
                 <li>
                     <a href="#contact" class="sidebar-nav__item"><i class="fa fa-comments"></i>Contact</a>
@@ -90,14 +90,14 @@
 
     <div class="screen-hider"></div>
     <main class="wrapper home">
-        <section class="section main" id="main">
+        <section class="section main main-bar" id="main">
             <div class="container">
                 <div class="row">
                     <div class="main-info">
                         <h3 class="main-info__title">Greetings, my name's <span class="name">Oleksandr Neschasnij</span></h3>
-                        <h3 class="main-info__intro">I'm looking for a job as an <span class="type-animation">assistant to an analyst/manager</span></h3>
+                        <h3 class="main-info__intro">I'm looking for a job as an <span class="type-animation">data scientist/ data analytic</span></h3>
                         <p class="main-info__text">Adaptability, curiousity and self-motivation are my strong sides, I am always ready for new challenges and thrive in a dynamic environment. My guiding principle is to always do my best to achieve optimal results.</p>
-                        <a href="#contact" class="btn info">More About Me</a>
+                        <a href="#about" class="btn info" id= "about">More About Me</a>
                     </div>
                     <div class="main-img">
                         <img src="assets/img/person.jpg" alt="avatar" class="img-fluid">
@@ -105,7 +105,7 @@
                 </div>
             </div>
         </section>
-        <section class="section about hidden" id="about">
+        <section class="section about hidden" id="about-bar">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -114,8 +114,8 @@
                 </div>
                 <p class="about-text">My hobby is front-end developing. I`ve discovered that quite recently and i always try to save some hours for improving my skills in
                     web-programming. Worth mentioning, my university provides good teaching programming languages for Data Science like SQL, R, Python and
-                    my plans for the nearst future is to study them in depth. In addition, i`m advanced user of Microsoft Office.
-                    Even though, I live in my hometown Vasylkiv, Kyiv region it won`t be a big deal for me to reach the Kyiv center</p>
+                    my plans for the nearst future is to study them in depth. In addition, i`m advanced user of Microsoft Office programs.
+                </p>
                 <div class="row">
                     <div class="about-info">
                         <h3 class="about-info__title"><span>Full Name:</span> Neschasnij Alexander</h3>
@@ -172,43 +172,17 @@
                     <div class="grid">
                         <div class="services-box">
                             <div class="services-icon">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg viewBox="0 0 24 24" id="diagram-bar-3" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM11 12C10.4477 12 10 12.4477 10 13V17V21C10 21.5523 10.4477 22 11 22H15H21C21.5523 22 22 21.5523 22 21V17V13C22 12.4477 21.5523 12 21 12H15H11ZM12 16V14H14V16H12ZM16 16V14H20V16H16ZM16 20V18H20V20H16ZM14 18V20H12V18H14Z"></path>
+                                        <path id="primary" d="M13,11v4M9,7v8m8-6v6" style="fill: none; stroke: var(--skin-color); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                        <path id="primary-2" data-name="primary" d="M3,19H21M5,3V21" style="fill: none; stroke: var(--skin-color); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
                                     </g>
                                 </svg>
                             </div>
-                            <h4 class="services-title">Excel tables</h4>
-                            <p class="services-info">Managing and analyzing a group of related data</p>
-                        </div>
-                        <div class="services-box">
-                            <div class="services-icon">
-                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <title>image</title>
-                                        <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-2.496-1.76-4.256t-4.224-1.76h-20q-2.496 0-4.256 1.76t-1.76 4.256v20zM4 26.016v-20q0-0.832 0.576-1.408t1.44-0.608h20q0.8 0 1.408 0.608t0.576 1.408v20q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 24q0 0.832 0.576 1.44t1.408 0.576h16q0.832 0 1.408-0.576t0.608-1.44v-0.928q-0.224-0.448-1.12-2.688t-1.6-3.584-1.28-2.112q-0.544-0.576-1.12-0.608t-1.152 0.384-1.152 1.12-1.184 1.568-1.152 1.696-1.152 1.6-1.088 1.184-1.088 0.448q-0.576 0-1.664-1.44-0.16-0.192-0.48-0.608-1.12-1.504-1.6-1.824-0.768-0.512-1.184 0.352-0.224 0.512-0.928 2.24t-1.056 2.56v0.64zM6.016 9.024q0 1.248 0.864 2.112t2.112 0.864 2.144-0.864 0.864-2.112-0.864-2.144-2.144-0.864-2.112 0.864-0.864 2.144z"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h4 class="services-title">Presantation</h4>
-                            <p class="services-info">Creating an interesting and animated presantations</p>
-                        </div>
-                        <div class="services-box">
-                            <div class="services-icon">
-                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="var(--skin-color)">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path fill="var(--skin-color)" fill-rule="evenodd" d="M4 1a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7.414A2 2 0 0017.414 6L13 1.586A2 2 0 0011.586 1H4zm0 2h7.586L16 7.414V17H4V3zm2 2a1 1 0 000 2h5a1 1 0 100-2H6zm-1 5a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h8a1 1 0 100-2H6z fill: var(--skin-color)"></path>
-                                    </g>
-                                </svg>
-                            </div>
-                            <h4 class="services-title">Documentation management</h4>
-                            <p class="services-info"> Storage, maintenance and organization of electronic documents</p>
+                            <h4 class="services-title">Data processing</h4>
+                            <p class="services-info">Analyzing datasets and visualization of statistical data with using Python and R</p>
                         </div>
                         <div class="services-box">
                             <div class="services-icon">
@@ -242,7 +216,7 @@
                                 </svg>
                             </div>
                             <h4 class="services-title">Web-programming</h4>
-                            <p class="services-info">Creating responsive and adaptive web-site with HTML, CSS, JavaScript</p>
+                            <p class="services-info">Creating responsive and adaptive web-site with HTML, CSS and JavaScript</p>
                         </div>
                         <div class="services-box">
                             <div class="services-icon">
@@ -259,21 +233,47 @@
                                 </svg>
                             </div>
                             <h4 class="services-title">Database creation</h4>
-                            <p class="services-info">Creating database. Usage of DQL, DDL, DML queries</p>
+                            <p class="services-info">Creating database. Usage of DQL, DDL, DML queries and triggers</p>
                         </div>
                         <div class="services-box">
                             <div class="services-icon">
-                                <svg viewBox="0 0 24 24" id="diagram-bar-3" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="var(--skin-color)">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                     <g id="SVGRepo_iconCarrier">
-                                        <path id="primary" d="M13,11v4M9,7v8m8-6v6" style="fill: none; stroke: var(--skin-color); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
-                                        <path id="primary-2" data-name="primary" d="M3,19H21M5,3V21" style="fill: none; stroke: var(--skin-color); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                        <path fill="var(--skin-color)" fill-rule="evenodd" d="M4 1a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V7.414A2 2 0 0017.414 6L13 1.586A2 2 0 0011.586 1H4zm0 2h7.586L16 7.414V17H4V3zm2 2a1 1 0 000 2h5a1 1 0 100-2H6zm-1 5a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h8a1 1 0 100-2H6z fill: var(--skin-color)"></path>
                                     </g>
                                 </svg>
                             </div>
-                            <h4 class="services-title">Data processing</h4>
-                            <p class="services-info">Analyzing datasets and creation of prediction models. Visualization of statistical data</p>
+                            <h4 class="services-title">Documentation management</h4>
+                            <p class="services-info"> Advanced usage of office programs from Microsoft package</p>
+                        </div>
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>image</title>
+                                        <path d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-2.496-1.76-4.256t-4.224-1.76h-20q-2.496 0-4.256 1.76t-1.76 4.256v20zM4 26.016v-20q0-0.832 0.576-1.408t1.44-0.608h20q0.8 0 1.408 0.608t0.576 1.408v20q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 24q0 0.832 0.576 1.44t1.408 0.576h16q0.832 0 1.408-0.576t0.608-1.44v-0.928q-0.224-0.448-1.12-2.688t-1.6-3.584-1.28-2.112q-0.544-0.576-1.12-0.608t-1.152 0.384-1.152 1.12-1.184 1.568-1.152 1.696-1.152 1.6-1.088 1.184-1.088 0.448q-0.576 0-1.664-1.44-0.16-0.192-0.48-0.608-1.12-1.504-1.6-1.824-0.768-0.512-1.184 0.352-0.224 0.512-0.928 2.24t-1.056 2.56v0.64zM6.016 9.024q0 1.248 0.864 2.112t2.112 0.864 2.144-0.864 0.864-2.112-0.864-2.144-2.144-0.864-2.112 0.864-0.864 2.144z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="services-title">Presantation</h4>
+                            <p class="services-info">Creating an interesting and animated presantations with using Canva and Figma</p>
+                        </div>
+                        <div class="services-box">
+                            <div class="services-icon">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM11 12C10.4477 12 10 12.4477 10 13V17V21C10 21.5523 10.4477 22 11 22H15H21C21.5523 22 22 21.5523 22 21V17V13C22 12.4477 21.5523 12 21 12H15H11ZM12 16V14H14V16H12ZM16 16V14H20V16H16ZM16 20V18H20V20H16ZM14 18V20H12V18H14Z"></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="services-title">C# learning</h4>
+                            <p class="services-info">Basic knowledge of OOP of programming language</p>
                         </div>
                     </div>
                 </div>

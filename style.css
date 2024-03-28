@@ -188,6 +188,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
   display: block;
 }
 
+.disabled {
+  color: grey !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media (min-width: 2000px) {
   .section h2 {
     font-size: 52px;
@@ -565,15 +571,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .gear-block__l {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
 }
 .gear-block__l img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 @media (min-width: 2000px) {
@@ -907,8 +913,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   width: calc(100% - 30px);
 }
 .services-icon {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   fill: var(--skin-color) !important;
   margin: 20px;
 }
