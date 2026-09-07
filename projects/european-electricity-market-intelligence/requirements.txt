@@ -1,0 +1,6 @@
+pandas>=2.2,<3.0
+pyarrow>=17
+requests>=2.32
+python-dotenv>=1.0
+PyYAML>=6.0
+entsoe-py>=0.6
